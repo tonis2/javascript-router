@@ -33,7 +33,7 @@ Router.on('/user/*/posts', (event) => {
 
 Using parameter :value 
 
-Using :value, retrives the value as parameter when parsing route
+Using **:value**, retrives the :id as parameter when parsing route
 
 ```javascript
 Router.on('/post/:id', (event) => {
