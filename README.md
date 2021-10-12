@@ -41,6 +41,14 @@ Router.on('/post/:id', (event) => {
 });
 ```
 
+Listen for route changes with 
+
+```javascript
+    window.addEventListener('popstate', (event) => {
+
+    });
+```
+
 #### Parameters
 
 Event parameters send along with route change event
