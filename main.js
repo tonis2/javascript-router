@@ -2,15 +2,20 @@ class Router {
     constructor() {
         this.routes = new Map();
         this.current = [];
-        window.onpopstate = this.routeUpdated.bind(this);
+        window.onpopstate = this.routeUpdate.bind(this);
     }
 
     get path() {
         return window.location.pathname.split('/').filter((x) => x != '');
     }
 
-    routeUpdated() {
+    get query() {
+        return Object.fromEntries(new URLSearchParams(window.location.search));
+    }
+
+    routeUpdate() {
         const path = this.path;
+        const query = this.query;
 
         if (path.length == 0) {
             this.routes.get('/')(path);
@@ -20,7 +25,7 @@ class Router {
         // Its' same route return
         if (this.current.join() === path.join()) return;
         this.current = path;
-        
+
         let parameters = {};
 
         for (let [route, callback] of this.routes) {
@@ -38,7 +43,7 @@ class Router {
                 .filter((x) => x);
 
             if (matches.length == routes.length && routes.length > 0) {
-                callback({ path, parameters, query: Object.fromEntries(new URLSearchParams(window.location.search)) });
+                callback({ path, parameters, query });
             }
         }
     }
