@@ -23,7 +23,7 @@ Router.on('/project', (event) => {
 
 ```
 
-Using * wildcard route, * accepts any value
+Using wildcard route, * accepts any value
 
 ```javascript
 Router.on('/user/*/posts', (event) => {
