@@ -41,12 +41,10 @@ Router.on('/post/:id', (event) => {
 });
 ```
 
-Listen for route changes with 
+Route changes can also be listened with
 
 ```javascript
-window.addEventListener('popstate', (event) => {
-
-});
+window.addEventListener('popstate', (event) => {});
 ```
 
 #### Parameters
