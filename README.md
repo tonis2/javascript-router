@@ -1,5 +1,3 @@
-# JS router
-
 
 ## How to use 
 
