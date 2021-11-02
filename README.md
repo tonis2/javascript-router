@@ -10,7 +10,7 @@ import Router from '/libraries/router.js';
 #### Change route 
 
 ```javascript
-Router.change('/post/:id');
+Router.change('/post/1');
 ```
 
 
