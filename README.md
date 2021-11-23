@@ -7,7 +7,7 @@ import to project
 import Router from '/libraries/router.js';
 ```
 
-Also add ` <base href="/">` to the .html file header
+Also add ` <base href="/">` to the main .html file header
 
 #### Change route 
 
